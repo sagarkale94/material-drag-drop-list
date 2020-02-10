@@ -1,0 +1,22 @@
+<div fxLayout="column">
+    <div class="example-container">
+        <p>X-axis</p>
+        <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box-axis" *ngFor="let item of todo">
+                <span>{{item.title}}</span>
+                <mat-icon style="cursor: pointer;" (click)="onXAxisRemoveClikedListener(item)">close</mat-icon>
+            </div>
+        </div>
+    </div>
+    <div class="example-container">
+        <p>Y-axis</p>
+        <div cdkDropList #todoList1="cdkDropList" [cdkDropListData]="yAxis" class="example-list"
+            (cdkDropListDropped)="dropY($event)">
+            <div class="example-box-axis" *ngFor="let item of yAxis">
+                <span>{{item.title}}</span>
+                <mat-icon style="cursor: pointer;" (click)="onYAxisRemoveClikedListener(item)">close</mat-icon>
+            </div>
+        </div>
+    </div>
+</div>
