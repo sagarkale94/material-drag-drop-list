@@ -6,10 +6,10 @@
             <div class="example-box-axis" *ngFor="let item of todo" fxLayout="row" fxLayoutAlign="space-between center">
                 <span>{{item.title}}</span>
                 <div fxLayout="row" fxFlex="40" fxLayoutGap="15px">
-                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;">
-                        <mat-option [value]="1">Count</mat-option>
-                        <mat-option [value]="2">Sum</mat-option>
-                        <mat-option [value]="3">Value</mat-option>
+                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;" [(ngModel)]="selectedValue">
+                        <mat-option value="1">Count</mat-option>
+                        <mat-option value="2">Sum</mat-option>
+                        <mat-option value="3">Value</mat-option>
                     </mat-select>
                     <mat-icon style="cursor: pointer;" (click)="onXAxisRemoveClikedListener(item)">close</mat-icon>
                 </div>
@@ -23,10 +23,10 @@
             <div class="example-box-axis" *ngFor="let item of yAxis" fxLayout="row" fxLayoutAlign="space-between center">
                 <span>{{item.title}}</span>
                 <div fxLayout="row" fxFlex="40" fxLayoutGap="15px">
-                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;">
-                        <mat-option [value]="1">Count</mat-option>
-                        <mat-option [value]="2">Sum</mat-option>
-                        <mat-option [value]="3">Value</mat-option>
+                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;"  [(ngModel)]="selectedValue">
+                        <mat-option value="1">Count</mat-option>
+                        <mat-option value="2">Sum</mat-option>
+                        <mat-option value="3">Value</mat-option>
                     </mat-select>
                     <mat-icon style="cursor: pointer;" (click)="onYAxisRemoveClikedListener(item)">close</mat-icon>
                 </div>

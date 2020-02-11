@@ -4,11 +4,12 @@
         <div class="example-box" *ngFor="let item of done" (cdkDragStarted)="dragStarted(item)" cdkDrag>
             <mat-checkbox disabled class="example-margin" [checked]="item.isChecked">
                 {{item.title}}
-                <div class="example-box" style="width: 400px; background-color: rgba(185, 226, 253, 0.658);"
+                <!-- <div class="example-box" style="width: 400px; background-color: rgba(185, 226, 253, 0.658);"
                     *cdkDragPreview>
                     <mat-checkbox style="color: white;" disabled class="example-margin" [checked]="item.isChecked">
-                        {{item.title}}</mat-checkbox>
-                </div>
+                        {{item.title}}
+                    </mat-checkbox>
+                </div> -->
             </mat-checkbox>
         </div>
     </div>

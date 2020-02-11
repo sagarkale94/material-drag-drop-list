@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AxisContainerComponent } from './axis-container/axis-container.component';
 import { HeaderContainerComponent } from './header-container/header-container.component';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatCheckboxModule,
     FlexLayoutModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

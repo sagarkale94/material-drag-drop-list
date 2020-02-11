@@ -9,6 +9,8 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem, copyArrayItem } from '
 })
 export class AxisContainerComponent implements OnInit {
 
+  selectedValue = '3';
+
   @Input() done: any;
   todo = [
   ];
