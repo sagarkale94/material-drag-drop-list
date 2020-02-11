@@ -3,9 +3,16 @@
         <p>X-axis</p>
         <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" class="example-list"
             (cdkDropListDropped)="drop($event)">
-            <div class="example-box-axis" *ngFor="let item of todo">
+            <div class="example-box-axis" *ngFor="let item of todo" fxLayout="row" fxLayoutAlign="space-between center">
                 <span>{{item.title}}</span>
-                <mat-icon style="cursor: pointer;" (click)="onXAxisRemoveClikedListener(item)">close</mat-icon>
+                <div fxLayout="row" fxFlex="40" fxLayoutGap="15px">
+                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;">
+                        <mat-option [value]="1">Count</mat-option>
+                        <mat-option [value]="2">Sum</mat-option>
+                        <mat-option [value]="3">Value</mat-option>
+                    </mat-select>
+                    <mat-icon style="cursor: pointer;" (click)="onXAxisRemoveClikedListener(item)">close</mat-icon>
+                </div>
             </div>
         </div>
     </div>
@@ -13,9 +20,16 @@
         <p>Y-axis</p>
         <div cdkDropList #todoList1="cdkDropList" [cdkDropListData]="yAxis" class="example-list"
             (cdkDropListDropped)="dropY($event)">
-            <div class="example-box-axis" *ngFor="let item of yAxis">
+            <div class="example-box-axis" *ngFor="let item of yAxis" fxLayout="row" fxLayoutAlign="space-between center">
                 <span>{{item.title}}</span>
-                <mat-icon style="cursor: pointer;" (click)="onYAxisRemoveClikedListener(item)">close</mat-icon>
+                <div fxLayout="row" fxFlex="40" fxLayoutGap="15px">
+                    <mat-select fxFlex="90" style="border: 1px solid #eee; border-radius:4px; padding: 4px;">
+                        <mat-option [value]="1">Count</mat-option>
+                        <mat-option [value]="2">Sum</mat-option>
+                        <mat-option [value]="3">Value</mat-option>
+                    </mat-select>
+                    <mat-icon style="cursor: pointer;" (click)="onYAxisRemoveClikedListener(item)">close</mat-icon>
+                </div>
             </div>
         </div>
     </div>
